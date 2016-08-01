@@ -46,7 +46,7 @@ if number_photos == "":
     print("To stop at any time hold down ctrl+c")
     i = 0
     while True:
-        camera.capture('image{0:05d}.jpg'.format(i))
+        camera.capture('./photos/image{0:05d}.jpg'.format(i))
         i += 1  # because not using a for loop
         sleep(delay)
 
@@ -56,7 +56,7 @@ else:
     print("Total capture time = ", number_photos * delay, " seconds")
 
     for i in range(number_photos + 1):
-        camera.capture('image{0:05d}.jpg'.format(i))
+        camera.capture('./photos/image{0:05d}.jpg'.format(i))
         print(i, "/", number_photos)
         sleep(delay)
 
