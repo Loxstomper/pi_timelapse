@@ -1,6 +1,6 @@
 # Created by Lochie Ashcroft
 
-from picamera import Picamera
+from picamera import PiCamera
 from os import system
 from time import sleep
 
@@ -55,9 +55,9 @@ else:
     print("To stop at any time hold down ctrl+c")
     print("Total capture time = ", number_photos * delay, " seconds")
 
-    for i in range(number_photos + 1):
+    for i in range(number_photos):
         camera.capture('./photos/image{0:05d}.jpg'.format(i))
-        print(i, "/", number_photos)
+        print(i, "/", number_photos - 1)
         sleep(delay)
 
 
